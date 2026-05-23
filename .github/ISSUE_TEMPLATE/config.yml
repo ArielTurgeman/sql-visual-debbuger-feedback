@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: SQL Visual Debugger on VS Code Marketplace
+    url: https://marketplace.visualstudio.com/items?itemName=arieldev.sql-visual-debugger
+    about: View the extension on the Visual Studio Marketplace.
