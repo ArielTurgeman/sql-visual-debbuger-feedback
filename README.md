@@ -1,22 +1,12 @@
-# SQL Visual Debugger Marketplace Preview
-
-This repository is used to preview the SQL Visual Debugger marketplace page and collect feedback.
-
-## Short Description
-
-Visually debug SQL SELECT queries clause by clause in VS Code for MySQL, PostgreSQL, SQL Server, and SQLite.
-
----
-
 # SQL Visual Debugger
 
 Debug SQL visually, clause by clause.
 
-See how rows change after `FROM`, `JOIN`, `WHERE`, `GROUP BY`, `HAVING`, `SELECT`, `DISTINCT`, `ORDER BY`, and `LIMIT` inside VS Code.
+SQL usually shows only the final result. SQL Visual Debugger shows how each clause changes the data on the way there.
 
-No database ready? Open the demo playground and try it instantly.
+Works with MySQL, PostgreSQL, SQL Server, and SQLite.
 
-![SQL Visual Debugger demo walkthrough](images/marketplace/demo-debug.gif)
+![SQL Visual Debugger demo walkthrough](images/marketplace/updateddemo.gif)
 
 ## Try it in 30 seconds
 
@@ -38,29 +28,26 @@ The demo playground uses sample SQLite data, so you can see the debugger before 
 
 You can also run `SQL Visual Debugger: Connect to Database` first if you want to save a local connection before debugging.
 
-![Right-click menu showing SQL Visual Debugger: Debug Query](images/marketplace/rightclick-v3.png)
+## What the debugger shows
 
-## What you can see
+SQL Visual Debugger helps you inspect how your result set changes across the logical SQL flow, including:
 
-### JOIN preview
+- `FROM` and source table loading
+- `JOIN` matching and row expansion
+- `WHERE` filtering
+- `GROUP BY` aggregation
+- `HAVING` filtering
+- `SELECT` projection
+- `ORDER BY` sorting
+- `LIMIT` / `OFFSET` result trimming
+- row-count changes between steps
+- visual explanations for complex clauses
 
-See both sides of the join, the join condition, row-count changes, and the joined result. Click join-key rows to inspect how matches were produced.
+These are examples of what the debugger can show, not the full boundary of the product.
 
-![JOIN debugging example](images/marketplace/join-v2.png)
+## Database support
 
-### GROUP BY breakdown
-
-Inspect the grouped output and the source rows that contributed to each group.
-
-![GROUP BY debugging example](images/marketplace/groupby-v2.png)
-
-### WHERE before and after
-
-See which rows survived filtering and which rows were removed.
-
-![WHERE debugging example](images/marketplace/where-v2.png)
-
-## Supported databases
+SQL Visual Debugger currently supports:
 
 - MySQL
 - PostgreSQL
@@ -69,22 +56,11 @@ See which rows survived filtering and which rows were removed.
 
 Connections are local-only. SQLite uses an absolute path to a local `.db` or `.sqlite` file.
 
-## Safety
+## Current scope
 
-SQL Visual Debugger is built for read-only debugging.
+SQL Visual Debugger is focused on `SELECT`-style analysis queries. It is designed to help users understand how result sets are built step by step.
 
-- Runs supported read-only `SELECT` and `WITH` query shapes
-- Blocks non-read-only SQL before execution
-- Blocks unsupported query shapes instead of guessing
-- Uses local database connections only
-- Keeps passwords only in session memory
-- Clears cached passwords after access-denied failures so the next attempt prompts again
-
-This is not a general-purpose SQL runner. It is a focused visual debugger for supported SQL query analysis.
-
-## Supported query shapes
-
-SQL Visual Debugger currently supports local debugging flows for MySQL, PostgreSQL, SQL Server, and SQLite built around:
+Supported query shapes include:
 
 - read-only `SELECT` queries
 - supported non-recursive `WITH` queries
@@ -104,11 +80,9 @@ SQL Visual Debugger currently supports local debugging flows for MySQL, PostgreS
 - supported window functions in `SELECT`
 - simple uncorrelated aggregate scalar subqueries in the `SELECT` list
 
-## Current boundaries
-
 When a query is outside the supported visual-debugging shape, the extension stops with a clear message instead of pretending to debug it.
 
-Currently unsupported or limited areas include:
+Current boundaries include:
 
 - non-`SELECT` statements such as `INSERT`, `UPDATE`, `DELETE`, `DROP`, and `ALTER`
 - `UNION`
@@ -125,6 +99,19 @@ Currently unsupported or limited areas include:
 PostgreSQL note: if your tables are inside a schema other than `public`, use schema-qualified names such as `schema_name.orders`.
 
 SQLite note: SQLite connections use a local absolute file path. Network shares and relative paths are intentionally rejected.
+
+## Safety
+
+SQL Visual Debugger is built for read-only debugging.
+
+- Runs supported read-only `SELECT` and `WITH` query shapes
+- Blocks non-read-only SQL before execution
+- Blocks unsupported query shapes instead of guessing
+- Uses local database connections only
+- Keeps passwords only in session memory
+- Clears cached passwords after access-denied failures so the next attempt prompts again
+
+This is not a general-purpose SQL runner. It is a focused visual debugger for supported SQL query analysis.
 
 ## Telemetry and privacy
 
@@ -162,3 +149,7 @@ Or by setting:
 ```json
 "sqlVisualDebugger.telemetry.enabled": false
 ```
+
+## Feedback and issues
+
+Found a bug or have feedback? Open an issue in the [SQL Visual Debugger feedback repository](https://github.com/ArielTurgeman/sql-visual-debbuger-feedback/issues/new/choose).
