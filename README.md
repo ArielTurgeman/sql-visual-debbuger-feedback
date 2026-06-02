@@ -10,6 +10,12 @@ Install SQL Visual Debugger from the Visual Studio Marketplace:
 
 [SQL Visual Debugger on Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=arieldev.sql-visual-debugger)
 
+## Help shape the next update
+
+Remote connections, AI debugging help, richer intermediate results, query comparison, and broader SQL support are being explored for the next SQL Visual Debugger update.
+
+[Join the waitlist and vote for the features you care about](https://arielturgeman.github.io/sql-visual-debugger-update/)
+
 ## Send feedback
 
 Found a bug, confusing behavior, or something that could be better?
@@ -31,4 +37,5 @@ Please do not include passwords, private database details, production data, or s
 ## Useful links
 
 - [Install SQL Visual Debugger](https://marketplace.visualstudio.com/items?itemName=arieldev.sql-visual-debugger)
+- [Join the waitlist for the next update](https://arielturgeman.github.io/sql-visual-debugger-update/)
 - [Open a bug or feature request](https://github.com/ArielTurgeman/sql-visual-debbuger-feedback/issues/new/choose)
