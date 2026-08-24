@@ -1,20 +1,49 @@
 # SQL Visual Debugger
 ## Privacy Policy
 
-**Version:** 1.0  
+**Version:** 1.1  
 **Effective Date:** August 24, 2026
 
 This Privacy Policy explains how SQL Visual Debugger processes information when you install or use the SQL Visual Debugger extension for Visual Studio Code.
 
 This Policy applies to SQL Visual Debugger itself. Third-party services, including Lemon Squeezy, Microsoft/Visual Studio Marketplace, GitHub, database providers, and other services you choose to use are governed by their own privacy policies.
 
-## 1. No Usage Telemetry or Analytics
+## 1. Limited Usage Telemetry
 
-SQL Visual Debugger does **not** use optional usage telemetry or analytics to track which buttons, commands, features, SQL construct categories, or debugging actions a user performs.
+SQL Visual Debugger may collect limited usage telemetry to help understand how the extension is used and to improve the product.
 
-SQL Visual Debugger does not intentionally send product-usage analytics to Ariel Turgeman or to a third-party analytics provider.
+The telemetry is designed to collect high-level product-usage information rather than the contents of a user's SQL queries, databases, files, or credentials.
 
-Communications that are technically necessary to provide a user-requested service, such as Premium license activation or validation, are not usage telemetry and are described separately below.
+Telemetry may include information such as:
+
+- use of particular extension features or commands;
+- clicks or interactions with product functionality;
+- high-level SQL construct or debugging categories used within the extension;
+- the installed SQL Visual Debugger extension version; and
+- similar high-level usage events used to understand feature adoption and improve the product.
+
+SQL Visual Debugger does **not intentionally include** the following in usage telemetry:
+
+- SQL query text;
+- database contents or query results;
+- table names;
+- column names;
+- database names;
+- database passwords or other database credentials;
+- database hostnames;
+- user-defined SQL object names;
+- file contents; or
+- file paths.
+
+Telemetry is not used to sell personal information, build advertising profiles, or track the contents of a user's database activity.
+
+### Telemetry Controls
+
+SQL Visual Debugger follows the applicable Visual Studio Code telemetry setting. If telemetry is disabled in Visual Studio Code, SQL Visual Debugger does not intentionally send optional usage telemetry.
+
+Users may also disable SQL Visual Debugger telemetry independently through the extension's telemetry control, including the **SQL Visual Debugger: Disable Telemetry** command where available.
+
+Disabling optional usage telemetry does not disable communications that are technically necessary to provide a user-requested feature, such as Premium license activation or validation.
 
 ## 2. SQL Queries and Database Data
 
@@ -75,7 +104,7 @@ Information processed directly by Lemon Squeezy is governed by Lemon Squeezy's o
 **Lemon Squeezy Privacy Policy:**  
 https://www.lemonsqueezy.com/privacy
 
-## 6. Purchase and Order Information
+## 6. Purchase, Order, and Terms-Acceptance Information
 
 SQL Visual Debugger does not directly process or store payment card information.
 
@@ -83,9 +112,18 @@ Premium purchases are processed through Lemon Squeezy as Merchant of Record.
 
 During checkout, Lemon Squeezy may collect information such as a purchaser's name, email address, billing information, payment information, tax information, and transaction details in accordance with its own policies.
 
-For license administration, customer support, fraud prevention, or resolving a purchase-related issue, Ariel Turgeman may have access through Lemon Squeezy to limited order or licensing information associated with a purchase, such as customer name, email address, order details, license details, and transaction status.
+When a user proceeds to Premium checkout through SQL Visual Debugger, the checkout may also include limited metadata recording that the user completed the required Terms acceptance step before checkout. This may include:
 
-Such information will be used only for legitimate product, licensing, support, security, fraud-prevention, or legal purposes.
+- a value indicating that the Terms of Use were accepted; and
+- the version of the Terms of Use presented at that time.
+
+For example, the checkout may contain metadata equivalent to `terms_accepted=true` and `terms_version=1.0`.
+
+This metadata is used only to document the applicable purchase and licensing flow. SQL Visual Debugger does not intentionally add IP addresses, device fingerprints, precise location, or unrelated personal information to the checkout for the purpose of recording Terms acceptance.
+
+For license administration, customer support, fraud prevention, documenting the purchase flow, or resolving a purchase-related issue, Ariel Turgeman may have access through Lemon Squeezy to limited order or licensing information associated with a purchase, such as customer name, email address, order details, license details, transaction status, and the limited Terms-acceptance metadata described above.
+
+Such information will be used only for legitimate product, licensing, support, security, fraud-prevention, transaction-record, or legal purposes.
 
 ## 7. Support Communications
 
@@ -104,9 +142,9 @@ Please do not include database passwords, confidential database contents, privat
 
 Information submitted through third-party support platforms is also subject to those platforms' privacy policies.
 
-## 8. Personal Information We Do Not Intentionally Collect Through the Extension
+## 8. Information We Do Not Intentionally Collect Through the Extension
 
-Except for information technically necessary for license activation/validation or information that you voluntarily provide for support, SQL Visual Debugger is not designed to collect or transmit to Ariel Turgeman:
+Except for the limited usage telemetry described in Section 1, information technically necessary for license activation or validation, and information that you voluntarily provide for support, SQL Visual Debugger is not designed to collect or transmit to Ariel Turgeman:
 
 - SQL query contents;
 - database contents or query results;
@@ -117,19 +155,21 @@ Except for information technically necessary for license activation/validation o
 - database hostnames;
 - user-defined SQL object names;
 - file contents;
-- file paths;
-- precise location information; or
-- product-usage telemetry or analytics.
+- file paths; or
+- precise location information.
 
-SQL Visual Debugger does not sell personal information, SQL query data, database contents, or database credentials.
+SQL Visual Debugger does not sell personal information, SQL query data, database contents, database credentials, or usage telemetry.
 
 ## 9. Purposes of Processing
 
-Where SQL Visual Debugger processes or accesses personal information, it is used only as reasonably necessary for purposes such as:
+Where SQL Visual Debugger processes or accesses information, it is used only as reasonably necessary for purposes such as:
 
+- understanding high-level feature usage and improving the extension;
+- identifying broad product-usage patterns and prioritizing product development;
 - providing and validating Premium licenses;
 - administering device activations;
 - fulfilling or supporting a purchase;
+- documenting the Terms version associated with the purchase flow;
 - responding to support requests;
 - protecting the Software and licensing system against fraud or abuse;
 - complying with legal obligations; and
@@ -140,17 +180,24 @@ Where SQL Visual Debugger processes or accesses personal information, it is used
 Where the GDPR, UK GDPR, or similar law applies and a legal basis is required, processing may be based on one or more of the following, depending on the circumstances:
 
 - performance of a contract or steps requested in connection with a contract, including providing licensed Premium functionality;
-- legitimate interests in operating, securing, supporting, and protecting the Software and its licensing system, where those interests are not overridden by applicable rights;
+- legitimate interests in operating, improving, securing, supporting, and protecting the Software and its licensing system, where those interests are not overridden by applicable rights;
+- consent or user choice where required by applicable law;
 - compliance with a legal obligation; or
 - another legal basis available under applicable law.
 
-Lemon Squeezy determines its own legal bases for information it processes as part of its services.
+Users can disable optional SQL Visual Debugger usage telemetry as described in Section 1.
+
+Lemon Squeezy and other independent third parties determine their own legal bases for information they process as part of their services.
 
 ## 11. Data Retention
 
-SQL Visual Debugger seeks to retain personal information under its control only for as long as reasonably necessary for the purpose for which it was received, including licensing administration, support, security, fraud prevention, dispute resolution, and legal obligations.
+SQL Visual Debugger seeks to retain information under its control only for as long as reasonably necessary for the purpose for which it was received.
+
+Limited usage telemetry may be retained for a reasonable period for product analysis, improvement, troubleshooting, security, and development planning, subject to the practices of the telemetry infrastructure used.
 
 Because order and licensing information may be maintained through Lemon Squeezy, retention of information within Lemon Squeezy is also subject to Lemon Squeezy's policies and legal obligations.
+
+Purchase and Terms-acceptance records may be retained for as long as reasonably necessary for licensing administration, transaction records, dispute resolution, fraud prevention, enforcement of agreements, and legal obligations.
 
 Support communications may be retained for as long as reasonably necessary to resolve the request, maintain support history, prevent abuse, or comply with legal requirements.
 
@@ -161,8 +208,9 @@ Depending on how you use SQL Visual Debugger, third-party services may be involv
 These may include:
 
 - Lemon Squeezy for Premium purchases and licensing;
-- Microsoft and Visual Studio Marketplace for distribution of the extension;
-- GitHub where used for source-related notices, feedback, or issue reporting;
+- Microsoft and Visual Studio Marketplace for distribution of the extension and Visual Studio Code platform functionality;
+- GitHub where used for Terms, privacy notices, feedback, or issue reporting;
+- telemetry infrastructure used solely to receive or analyze the limited usage telemetry described in Section 1, if applicable;
 - the database server, cloud database provider, or infrastructure selected by the user; and
 - technical libraries, drivers, or infrastructure necessary to operate the Software.
 
@@ -190,7 +238,9 @@ Depending on applicable law and the information involved, users may have rights 
 
 Requests concerning information under the control of SQL Visual Debugger may be sent to the contact address below.
 
-For information collected directly by Lemon Squeezy, Microsoft, GitHub, a database provider, or another independent third party, requests may need to be directed to that provider in accordance with its privacy policy.
+Where applicable, users may also withdraw consent or disable optional usage telemetry through the controls described in Section 1. Disabling telemetry does not affect the lawfulness of processing that occurred before the setting was changed where applicable law provides otherwise.
+
+For information collected directly by Lemon Squeezy, Microsoft, GitHub, a database provider, telemetry provider, or another independent third party, requests may need to be directed to that provider in accordance with its privacy policy.
 
 ## 16. Children's Privacy
 
@@ -200,7 +250,7 @@ We do not knowingly design the Software to collect personal information from chi
 
 ## 17. Changes to This Privacy Policy
 
-This Privacy Policy may be updated from time to time to reflect changes to SQL Visual Debugger, licensing infrastructure, third-party services, legal requirements, or privacy practices.
+This Privacy Policy may be updated from time to time to reflect changes to SQL Visual Debugger, telemetry practices, licensing infrastructure, third-party services, legal requirements, or privacy practices.
 
 The current version and its effective date will be made publicly available.
 
