@@ -1,16 +1,18 @@
 # SQL Visual Debugger
 ## Privacy Policy
 
-**Version:** 1.1  
-**Effective Date:** August 24, 2026
+**Version:** 1.0  
+**Effective Date:** August 25, 2026
 
 This Privacy Policy explains how SQL Visual Debugger processes information when you install or use the SQL Visual Debugger extension for Visual Studio Code.
 
 This Policy applies to SQL Visual Debugger itself. Third-party services, including Lemon Squeezy, Microsoft/Visual Studio Marketplace, GitHub, database providers, and other services you choose to use are governed by their own privacy policies.
 
-## 1. Limited Usage Telemetry
+## 1. Optional Limited Usage Telemetry
 
-SQL Visual Debugger may collect limited usage telemetry to help understand how the extension is used and to improve the product.
+When telemetry is enabled, SQL Visual Debugger may collect limited usage telemetry to help understand how the extension is used and to improve the product.
+
+SQL Visual Debugger uses **PostHog** as a third-party analytics provider to receive and analyze these limited usage events.
 
 The telemetry is designed to collect high-level product-usage information rather than the contents of a user's SQL queries, databases, files, or credentials.
 
@@ -22,7 +24,7 @@ Telemetry may include information such as:
 - the installed SQL Visual Debugger extension version; and
 - similar high-level usage events used to understand feature adoption and improve the product.
 
-SQL Visual Debugger does **not intentionally include** the following in usage telemetry:
+SQL Visual Debugger does **not intentionally include** the following in usage telemetry sent for product analytics:
 
 - SQL query text;
 - database contents or query results;
@@ -35,21 +37,32 @@ SQL Visual Debugger does **not intentionally include** the following in usage te
 - file contents; or
 - file paths.
 
-Telemetry is not used to sell personal information, build advertising profiles, or track the contents of a user's database activity.
+PostHog may independently process technical information associated with telemetry requests, such as an IP address or device/network information, in accordance with PostHog's own service operation and privacy practices.
+
+Telemetry is not used by SQL Visual Debugger to sell personal information, build advertising profiles, or track the contents of a user's database activity.
+
+**PostHog Privacy Policy:**  
+https://posthog.com/privacy
 
 ### Telemetry Controls
 
-SQL Visual Debugger follows the applicable Visual Studio Code telemetry setting. If telemetry is disabled in Visual Studio Code, SQL Visual Debugger does not intentionally send optional usage telemetry.
+Users may disable SQL Visual Debugger telemetry at any time by running:
 
-Users may also disable SQL Visual Debugger telemetry independently through the extension's telemetry control, including the **SQL Visual Debugger: Disable Telemetry** command where available.
+`SQL Visual Debugger: Disable Telemetry`
 
-Disabling optional usage telemetry does not disable communications that are technically necessary to provide a user-requested feature, such as Premium license activation or validation.
+When telemetry is disabled, SQL Visual Debugger does not intentionally send optional product-usage events to PostHog.
 
-## 2. SQL Queries and Database Data
+Disabling optional usage telemetry does not disable communications that are technically necessary for separate functions requested or used by the user, such as Premium license activation or validation, or an update check through GitHub Pages.
 
-To provide its debugging functionality, SQL Visual Debugger processes SQL queries and database information within the extension and in connection with the database selected by the user.
+## 2. SQL Queries, Files, and Database Data
 
-Depending on the debugging operation, this may involve:
+SQL Visual Debugger is designed around a direct/local debugging architecture.
+
+For local data sources such as Excel, CSV, and SQLite, the relevant file or database data is read and processed locally on the user's device.
+
+For remote databases, the connection is made directly from the user's device / Visual Studio Code environment to the database server or provider selected by the user.
+
+To provide debugging functionality, SQL Visual Debugger may process within the extension, or directly with the user-selected database environment:
 
 - SQL query text;
 - schema information;
@@ -58,9 +71,11 @@ Depending on the debugging operation, this may involve:
 - database connection information; and
 - information required to generate debugging steps, previews, filters, or explanations.
 
+SQL Visual Debugger does not route SQL query text, schema information, table or column information, query results, database contents, or database credentials through servers or cloud infrastructure operated by Ariel Turgeman as part of the debugging process.
+
 SQL Visual Debugger does not intentionally transmit SQL query text, database contents, query results, table names, column names, or database credentials to Ariel Turgeman for analytics or tracking purposes.
 
-When the user connects to a remote database, information necessary to execute the requested query or read-only helper queries is necessarily transmitted between the user's device and the database server or provider selected by the user.
+When the user connects to a remote database, information necessary to execute the requested query or read-only helper queries is necessarily transmitted directly between the user's device and the database server or provider selected by the user.
 
 The privacy and security practices of that database server or provider are governed by the provider or operator of that database environment.
 
@@ -112,12 +127,12 @@ Premium purchases are processed through Lemon Squeezy as Merchant of Record.
 
 During checkout, Lemon Squeezy may collect information such as a purchaser's name, email address, billing information, payment information, tax information, and transaction details in accordance with its own policies.
 
-When a user proceeds to Premium checkout through SQL Visual Debugger, the checkout may also include limited metadata recording that the user completed the required Terms acceptance step before checkout. This may include:
+When a user proceeds to Premium checkout through SQL Visual Debugger, the checkout may also include limited metadata recording that the user completed the required End User License Agreement & Terms of Use acceptance step before checkout. This may include:
 
-- a value indicating that the Terms of Use were accepted; and
-- the version of the Terms of Use presented at that time.
+- a value indicating that the End User License Agreement & Terms of Use were accepted; and
+- the version of those Terms presented at that time.
 
-For example, the checkout may contain metadata equivalent to `terms_accepted=true` and `terms_version=1.0`.
+For example, the checkout may contain metadata equivalent to `terms_accepted=true` and `terms_version=1.3`.
 
 This metadata is used only to document the applicable purchase and licensing flow. SQL Visual Debugger does not intentionally add IP addresses, device fingerprints, precise location, or unrelated personal information to the checkout for the purpose of recording Terms acceptance.
 
@@ -207,12 +222,22 @@ Depending on how you use SQL Visual Debugger, third-party services may be involv
 
 These may include:
 
-- Lemon Squeezy for Premium purchases and licensing;
-- Microsoft and Visual Studio Marketplace for distribution of the extension and Visual Studio Code platform functionality;
-- GitHub where used for Terms, privacy notices, feedback, or issue reporting;
-- telemetry infrastructure used solely to receive or analyze the limited usage telemetry described in Section 1, if applicable;
+- **Lemon Squeezy** for Premium purchases, license activation, and license validation;
+- **PostHog** for the optional limited usage telemetry described in Section 1 when telemetry is enabled;
+- **GitHub / GitHub Pages** for hosting Terms and privacy notices, feedback or issue reporting, and update checks;
+- **Microsoft and Visual Studio Marketplace** for distribution of the extension and Visual Studio Code platform functionality;
 - the database server, cloud database provider, or infrastructure selected by the user; and
 - technical libraries, drivers, or infrastructure necessary to operate the Software.
+
+The update check to GitHub Pages is separate from SQL debugging and does not intentionally include SQL query text, schema information, table names, column names, query results, database contents, database credentials, or file contents.
+
+As with ordinary network requests, GitHub may receive technical connection information associated with a request to its services in accordance with GitHub's own privacy practices.
+
+**PostHog Privacy Policy:**  
+https://posthog.com/privacy
+
+**GitHub Privacy Statement:**  
+https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement
 
 Those services are governed by their own terms and privacy policies.
 
@@ -262,7 +287,7 @@ For the personal information processed directly in connection with SQL Visual De
 
 **Ariel Turgeman**  
 **Country:** Israel  
-**Privacy / support email:** [INSERT SUPPORT EMAIL]
+**Privacy / support email:** arielturgi@gmail.com
 
 Questions or requests concerning this Privacy Policy or personal information under our control may be sent to the email address above.
 
@@ -272,10 +297,16 @@ https://marketplace.visualstudio.com/items?itemName=arieldev.sql-visual-debugger
 ## 19. Related Documents
 
 **SQL Visual Debugger End User License Agreement & Terms of Use**  
-[TERMS.md](./TERMS.md)
+https://github.com/ArielTurgeman/sql-visual-debbuger-feedback/blob/main/TERMS.md
 
 **Lemon Squeezy Privacy Policy**  
 https://www.lemonsqueezy.com/privacy
 
 **Lemon Squeezy Buyer Terms**  
 https://www.lemonsqueezy.com/buyer-terms
+
+**PostHog Privacy Policy**  
+https://posthog.com/privacy
+
+**GitHub Privacy Statement**  
+https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement
