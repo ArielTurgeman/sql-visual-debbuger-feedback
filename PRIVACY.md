@@ -12,17 +12,11 @@ This Policy applies to SQL Visual Debugger itself. Third-party services, includi
 
 When telemetry is enabled, SQL Visual Debugger may collect limited usage telemetry to help understand how the extension is used and to improve the product.
 
-SQL Visual Debugger uses **PostHog** as a third-party analytics provider to receive and analyze these limited usage events.
+SQL Visual Debugger uses **PostHog** as a third-party analytics provider to process these limited usage events for product analytics.
 
 The telemetry is designed to collect high-level product-usage information rather than the contents of a user's SQL queries, databases, files, or credentials.
 
-Telemetry may include information such as:
-
-- use of particular extension features or commands;
-- clicks or interactions with product functionality;
-- high-level SQL construct or debugging categories used within the extension;
-- the installed SQL Visual Debugger extension version; and
-- similar high-level usage events used to understand feature adoption and improve the product.
+Usage telemetry may include high-level product-usage and interaction information used to understand feature adoption, improve the product, and prioritize development.
 
 SQL Visual Debugger does **not intentionally include** the following in usage telemetry sent for product analytics:
 
@@ -37,7 +31,7 @@ SQL Visual Debugger does **not intentionally include** the following in usage te
 - file contents; or
 - file paths.
 
-PostHog may independently process technical information associated with telemetry requests, such as an IP address or device/network information, in accordance with PostHog's own service operation and privacy practices.
+User IP addresses are not stored as part of SQL Visual Debugger's usage telemetry.
 
 Telemetry is not used by SQL Visual Debugger to sell personal information, build advertising profiles, or track the contents of a user's database activity.
 
@@ -51,6 +45,8 @@ Users may disable SQL Visual Debugger telemetry at any time by running:
 `SQL Visual Debugger: Disable Telemetry`
 
 When telemetry is disabled, SQL Visual Debugger does not intentionally send optional product-usage events to PostHog.
+
+Providing optional usage telemetry is not required to use the Free Version or Premium debugging functionality.
 
 Disabling optional usage telemetry does not disable communications that are technically necessary for separate functions requested or used by the user, such as Premium license activation or validation, or an update check through GitHub Pages.
 
@@ -112,6 +108,8 @@ Information transmitted for this purpose may include:
 
 This information is processed only as reasonably necessary to activate, validate, protect, administer, and enforce the permitted use of the Premium license.
 
+License activation and validation information is necessary to activate and validate Premium functionality. If the required licensing communication or information is unavailable, Premium activation or validation may not be possible.
+
 Premium purchases and licensing infrastructure may be provided through Lemon Squeezy.
 
 Information processed directly by Lemon Squeezy is governed by Lemon Squeezy's own privacy practices:
@@ -132,7 +130,7 @@ When a user proceeds to Premium checkout through SQL Visual Debugger, the checko
 - a value indicating that the End User License Agreement & Terms of Use were accepted; and
 - the version of those Terms presented at that time.
 
-For example, the checkout may contain metadata equivalent to `terms_accepted=true` and `terms_version=1.3`.
+For example, the checkout may contain metadata equivalent to `terms_accepted=true` and `terms_version=1.0`.
 
 This metadata is used only to document the applicable purchase and licensing flow. SQL Visual Debugger does not intentionally add IP addresses, device fingerprints, precise location, or unrelated personal information to the checkout for the purpose of recording Terms acceptance.
 
@@ -188,7 +186,8 @@ Where SQL Visual Debugger processes or accesses information, it is used only as 
 - responding to support requests;
 - protecting the Software and licensing system against fraud or abuse;
 - complying with legal obligations; and
-- establishing, exercising, or defending legal claims where necessary.
+- establishing, exercising, or defending legal claims where necessary; and
+- checking for available extension updates through GitHub Pages.
 
 ## 10. Legal Bases Where Applicable
 
@@ -202,7 +201,7 @@ Where the GDPR, UK GDPR, or similar law applies and a legal basis is required, p
 
 Users can disable optional SQL Visual Debugger usage telemetry as described in Section 1.
 
-Lemon Squeezy and other independent third parties determine their own legal bases for information they process as part of their services.
+Third-party providers may act in different roles depending on the service. Where a provider processes information on behalf of SQL Visual Debugger, the applicable legal basis described above applies to that processing. Where a provider determines its own purposes for processing, it is responsible for its own legal basis under applicable law.
 
 ## 11. Data Retention
 
@@ -239,9 +238,7 @@ https://posthog.com/privacy
 **GitHub Privacy Statement:**  
 https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement
 
-Those services are governed by their own terms and privacy policies.
-
-Their independent collection and processing practices are outside the scope of this Privacy Policy.
+These providers may process information as necessary to provide their respective services, subject to the applicable arrangement and their own terms and privacy notices.
 
 ## 13. International Processing
 
@@ -265,7 +262,7 @@ Requests concerning information under the control of SQL Visual Debugger may be 
 
 Where applicable, users may also withdraw consent or disable optional usage telemetry through the controls described in Section 1. Disabling telemetry does not affect the lawfulness of processing that occurred before the setting was changed where applicable law provides otherwise.
 
-For information collected directly by Lemon Squeezy, Microsoft, GitHub, a database provider, telemetry provider, or another independent third party, requests may need to be directed to that provider in accordance with its privacy policy.
+For information collected directly by Lemon Squeezy, Microsoft, GitHub, a database provider, or another third-party service, requests may need to be directed to that provider in accordance with its privacy policy.
 
 ## 16. Children's Privacy
 
@@ -283,7 +280,7 @@ Where reasonably appropriate, material changes may be communicated through the S
 
 ## 18. Contact and Responsible Party
 
-For the personal information processed directly in connection with SQL Visual Debugger, the responsible party is:
+For personal information for which Ariel Turgeman determines the purposes and means of processing in connection with SQL Visual Debugger, the responsible party / data controller is:
 
 **Ariel Turgeman**  
 **Country:** Israel  
