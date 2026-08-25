@@ -1,7 +1,7 @@
 # SQL Visual Debugger
 ## End User License Agreement & Terms of Use
 
-**Version:** 1.0 
+**Version:** 1.0  
 **Effective Date:** August 25, 2026
 
 Copyright © 2026 Ariel Turgeman. All rights reserved.
@@ -164,6 +164,8 @@ For local data sources such as Excel, CSV, and SQLite, debugging data is read an
 
 For remote databases, the connection is made directly from the user's device / Visual Studio Code environment to the database server or provider selected by the user. SQL Visual Debugger does not route SQL query text, schema information, table or column information, query results, database contents, or database credentials through servers or cloud infrastructure operated by Ariel Turgeman as part of the debugging process.
 
+The specific data sources, database systems, connection methods, authentication methods, encryption options, and other technical configurations currently supported by the Software are described in the applicable Marketplace listing or product documentation and may change over time. A reference in these Terms to a database product or category does not mean that every connection or authentication configuration for that product is supported.
+
 Although safeguards are implemented to block unsupported non-read-only SQL, no software safeguard can be guaranteed to be infallible in every environment.
 
 You remain responsible for using appropriate database credentials, permissions, backups, and safeguards for the environments in which you use the Software.
@@ -228,7 +230,7 @@ Refunds, cancellations, payment disputes, and chargebacks are transaction-relate
 
 These Terms do not create a separate or additional refund entitlement.
 
-If a Premium purchase is refunded, reversed, successfully charged back, cancelled, or determined to be fraudulent, the Premium license associated with that transaction may be disabled or revoked.
+If any amount of a Premium purchase is refunded, whether partially or in full, or if the payment is reversed, successfully charged back, cancelled, or determined to be fraudulent, the Premium license associated with that transaction may be disabled or revoked.
 
 Nothing in this section limits any right that cannot legally be excluded or waived.
 
@@ -280,7 +282,7 @@ A Premium license may be suspended or disabled where reasonably necessary if:
 - licensing or activation protections are intentionally bypassed;
 - the license is used by unauthorized users;
 - the purchase is fraudulent;
-- the underlying payment is refunded, reversed, or successfully charged back;
+- any amount of the underlying payment is refunded, whether partially or in full, or the payment is reversed or successfully charged back;
 - these Terms are materially violated; or
 - suspension or termination is required by applicable law.
 
@@ -294,7 +296,7 @@ Provisions which by their nature are intended to survive suspension, termination
 
 TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, SQL VISUAL DEBUGGER IS PROVIDED **"AS IS" AND "AS AVAILABLE"**, WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING, TO THE EXTENT SUCH WARRANTIES MAY LAWFULLY BE DISCLAIMED, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.
 
-NO GUARANTEE IS MADE THAT THE SOFTWARE WILL:
+WITHOUT LIMITING THE FOREGOING, THE FOLLOWING LIST IS NON-EXHAUSTIVE. NO GUARANTEE IS MADE THAT THE SOFTWARE WILL:
 
 - OPERATE WITHOUT INTERRUPTION OR ERROR;
 - MEET EVERY USER'S REQUIREMENTS;
